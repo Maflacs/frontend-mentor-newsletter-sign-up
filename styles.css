@@ -1,162 +1,182 @@
 /* Define CSS variables for colors */
 :root {
-  --bg-color: hsl(234, 29%, 20%);
-  --text-color: hsl(0, 0%, 100%);
-  --container-bg-color: hsl(0, 0%, 100%);
-  --header-color: hsl(234, 29%, 20%);
-  --text-secondary-color: hsl(235, 18%, 26%);
-  --check-color: hsl(4, 100%, 67%);
-  --border-color: hsl(231, 7%, 60%);
-  --error-color: hsl(4, 100%, 67%);
-  --button-bg-color: hsl(234, 29%, 20%);
-  --button-hover-bg-color: hsl(235, 18%, 26%);
-}
-
-body {
-  font-family: "Roboto", sans-serif;
-  font-size: 16px;
-  background-color: var(--bg-color);
-  color: var(--text-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  margin: 0;
-}
-
-#form {
-  background-color: var(--container-bg-color);
-  border-radius: 10px;
-  display: flex;
-  gap: 1rem;
-  padding: 1.5rem;
-  width: 55%;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.content {
-  padding: 2rem 2rem 5rem 2rem;
-}
-
-h1 {
-  color: var(--header-color);
-  font-weight: 700;
-  font-size: 44px;
-}
-
-p {
-  line-height: 2rem;
-}
-
-p,
-li {
-  color: var(--text-secondary-color);
-  font-size: 16px;
-}
-
-ul {
-  list-style-type: none;
-  padding: 0;
-  margin: 0;
-}
-
-li {
-  display: flex;
-  align-items: center;
-  margin: 1rem 0;
-}
-
-li::before {
-  width: 20px;
-  height: 20px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-right: 0.8rem;
-  width: 16px;
-  content: url(./assets/images/icon-list.svg);
-}
-
-.input-container {
-  margin-top: 20px;
-}
-
-input.invalid {
-  border-color: var(--error-color);
-  background-color: rgba(255, 97, 85, 0.1);
-  color: var(--error-color);
-}
-
-input.invalid::placeholder {
-  color: var(--error-color);
-}
-
-.error-container {
-  display: flex;
-  justify-content: space-between;
-  font-size: 12px;
-  font-weight: 700;
-  margin-bottom: .5rem;
-}
-
-label {
-  color: var(--header-color);
-  font-weight: 700;
-}
-
-input[type="email"] {
-  width: 100%;
-  padding: 10px;
-  border: 1px solid var(--border-color);
-  border-radius: 5px;
-  font-size: 16px;
-  box-sizing: border-box;
-  transition: border-color 0.3s ease;
-}
-
-input[type="email"]:hover,
-input[type="email"]:focus {
-  border-color: var(--header-color);
-}
-
-.error-message {
-  display: none;
-  color: var(--error-color);
-}
-
-input.invalid + .error-message {
-  display: flex;
-}
-
-button {
-  background-color: var(--button-bg-color);
-  color: var(--text-color);
-  border: none;
-  padding: 1rem 0;
-  border-radius: 5px;
-  font-size: 16px;
-  margin-top: 20px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-  width: 100%;
-  font-weight: 700;
-}
-
-button:hover {
-  background: linear-gradient(45deg, var(--check-color), #FF683E);
-}
-
-.image-container {
-  background-image: url(./assets/images/illustration-sign-up-desktop.svg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  border-radius: 10px;
-  overflow: hidden;
-  width: 58%;
-}
-
-#success {
+    --bg-color: hsl(234, 29%, 20%);
+    --text-color: hsl(0, 0%, 100%);
+    --container-bg-color: hsl(0, 0%, 100%);
+    --header-color: hsl(234, 29%, 20%);
+    --text-secondary-color: hsl(235, 18%, 26%);
+    --check-color: hsl(4, 100%, 67%);
+    --border-color: hsl(231, 7%, 60%);
+    --error-color: hsl(4, 100%, 67%);
+    --button-bg-color: hsl(234, 29%, 20%);
+  }
+  
+  /* Basic styling for the body */
+  body {
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+  }
+  
+  /* Styling for the form container */
+  #form {
+    background-color: var(--container-bg-color);
+    border-radius: 10px;
+    display: flex;
+    gap: 1rem;
+    padding: 1.5rem;
+    width: 55%;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Styling for the content inside the form */
+  .content {
+    padding: 2rem 2rem 5rem 2rem;
+  }
+  
+  /* Styling for the main heading */
+  h1 {
+    color: var(--header-color);
+    font-weight: 700;
+    font-size: 44px;
+  }
+  
+  /* Styling for paragraphs */
+  p {
+    line-height: 2rem;
+  }
+  
+  /* Styling for paragraphs and list items */
+  p,
+  li {
+    color: var(--text-secondary-color);
+    font-size: 16px;
+  }
+  
+  /* Remove default list styling */
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  /* Styling for list items */
+  li {
+    display: flex;
+    align-items: center;
+    margin: 1rem 0;
+  }
+  
+  /* Custom bullet point for list items */
+  li::before {
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 0.8rem;
+    content: url(./assets/images/icon-list.svg);
+  }
+  
+  /* Styling for the input container */
+  .input-container {
+    margin-top: 20px;
+  }
+  
+  /* Styling for invalid input fields */
+  input.invalid {
+    border-color: var(--error-color);
+    background-color: rgba(255, 97, 85, 0.1);
+    color: var(--error-color);
+  }
+  
+  /* Styling for placeholder text in invalid input fields */
+  input.invalid::placeholder {
+    color: var(--error-color);
+  }
+  
+  /* Styling for error container */
+  .error-container {
+    display: flex;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Styling for labels */
+  label {
+    color: var(--header-color);
+    font-weight: 700;
+  }
+  
+  /* Styling for email input fields */
+  input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    transition: border-color 0.3s ease;
+  }
+  
+  /* Hover and focus states for email input fields */
+  input[type="email"]:hover,
+  input[type="email"]:focus {
+    border-color: var(--header-color);
+  }
+  
+  /* Styling for error messages */
+  .error-message {
+    display: none;
+    color: var(--error-color);
+  }
+  
+  /* Display error message when input is invalid */
+  input.invalid + .error-message {
+    display: flex;
+  }
+  
+  /* Styling for buttons */
+  button {
+    background-color: var(--button-bg-color);
+    color: var(--text-color);
+    border: none;
+    padding: 1rem 0;
+    border-radius: 5px;
+    font-size: 16px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    width: 100%;
+    font-weight: 700;
+  }
+  
+  /* Hover state for buttons */
+  button:hover {
+    background: linear-gradient(45deg, var(--check-color), #FF683E);
+  }
+  
+  /* Styling for the image container */
+  .image-container {
+    background-image: url(./assets/images/illustration-sign-up-desktop.svg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 58%;
+  }
+  
+  /* Styling for the success message container */
+  #success {
     display: none;
     flex-direction: column;
     justify-content: center;
@@ -164,65 +184,76 @@ button:hover {
     padding: 3rem;
     border-radius: 20px;
     background-color: var(--container-bg-color);
-}
-
-.succes-img {
+  }
+  
+  /* Styling for the success image */
+  .succes-img {
     width: 5rem;
-}
-
-h2 {
+  }
+  
+  /* Styling for the heading in the success container */
+  h2 {
     color: var(--header-color);
     font-size: 36px;
     font-weight: 700;
     margin: 1rem 0;
-}
-
-#success p {
+  }
+  
+  /* Styling for paragraphs in the success container */
+  #success p {
     line-height: 1.5rem;
-}
-
-@media (max-width: 1000px) {
-  #form {
-    flex-direction: column;
-    width: 100%;
-    height: 100vh;
-    padding: 0;
-    border-radius: 0%;
-    
   }
-
-  .image-container {
-    background-image: url(./assets/images/illustration-sign-up-mobile.svg);
-    order: 1;
-    height: 200px;
-    border-top-left-radius: 0%;
-    border-top-right-radius: 0%;
-    width: 100%;
+  
+  /* Responsive design adjustments for smaller screens */
+  @media (max-width: 1000px) {
+    /* Adjust form container for mobile view */
+    #form {
+      flex-direction: column;
+      width: 100%;
+      height: 100vh;
+      padding: 0;
+      border-radius: 0%;
+    }
+  
+    /* Adjust image container for mobile view */
+    .image-container {
+      background-image: url(./assets/images/illustration-sign-up-mobile.svg);
+      order: 1;
+      height: 200px;
+      border-top-left-radius: 0%;
+      border-top-right-radius: 0%;
+      width: 100%;
+    }
+  
+    /* Adjust content container for mobile view */
+    .content {
+      order: 2;
+      margin: 1rem;
+      padding: 1rem;
+    }
+  
+    /* Adjust success container for mobile view */
+    #success {
+      width: 100%;
+      height: 100vh;
+      gap: 1rem;
+    }
+  
+    /* Adjust success image for mobile view */
+    .succes-img {
+      margin: 10rem 0 2rem 0;
+      width: 4rem;
+    }
+  
+    /* Adjust margin for secondary heading in mobile view */
+    h2 {
+      margin: 0;
+    }
+  
+    /* Ensure the dismiss button is at the bottom in mobile view */
+    #dismiss-button {
+      margin-top: auto; /* Push the button to the bottom */
+      margin-bottom: 2rem;
+    }
   }
-
-  .content {
-    order: 2;
-    margin: 1rem;
-    padding: 1rem;
-  }
-
-  #success {
-    width: 100%;
-    height: 100vh;
-    gap: 1rem;
-  }
-
-  .succes-img {
-    margin: 10rem 0 2rem 0;
-    width: 4rem;
-  }
-
-  h2 {
-    margin: 0;
-  }
-
-  #dismiss-button {
-    margin-top: auto; /* Push the button to the bottom */
-    margin-bottom: 2rem;
-  }
-}
+  
